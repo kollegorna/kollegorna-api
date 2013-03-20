@@ -10,8 +10,10 @@ KollegornaApi::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  match 'climate' => 'twine_temperatures#show'
-  match 'climate/update' => 'twine_temperatures#create'
+  match 'climate' => 'temperatures#show'
+  match 'climate/update' => 'temperatures#create'
+  match 'has-left-the-building' => 'presences#show'
+  match 'has-left-the-building/update' => 'presences#create'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

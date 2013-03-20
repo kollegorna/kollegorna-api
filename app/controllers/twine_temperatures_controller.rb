@@ -10,6 +10,6 @@ class TwineTemperaturesController < ApplicationController
 
   def show
     @temp_reading = TwineTemperature.last
-    render :json => @temp_reading
+    render :json => @temp_reading, :only => [:created_at, :status], :methods => :celsius
   end
 end

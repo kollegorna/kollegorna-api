@@ -1,7 +1,7 @@
 class PresencesController < ApplicationController
 
   def create
-    if Temperature.create!(status: params[:status])
+    if Presence.create!(status: params[:status])
       head :created
     else
       head :bad_request

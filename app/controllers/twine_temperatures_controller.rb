@@ -1,7 +1,11 @@
 class TwineTemperaturesController < ApplicationController
 
   def create
-    TwineTemperature.create(value: params[:temperature])
+    if TwineTemperature.create(value: params[:temperature])
+      head :created
+    else
+      head :bad_request
+    end
   end
 
   def show

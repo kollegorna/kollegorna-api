@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328100608) do
+ActiveRecord::Schema.define(:version => 20130328102432) do
 
   create_table "presences", :force => true do |t|
     t.string   "status"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20130328100608) do
   end
 
   create_table "temperatures", :force => true do |t|
-    t.integer  "value"
+    t.integer  "fahrenheit"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

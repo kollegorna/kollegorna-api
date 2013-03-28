@@ -1,9 +1,9 @@
 class Temperature < ActiveRecord::Base
-  attr_accessible :value
-  validates_presence_of :value
+  attr_accessible :fahrenheit
+  validates_presence_of :fahrenheit
 
   def celsius
-    @celsius ||= (value - 32) * 5 / 9
+    @celsius ||= (fahrenheit - 32) * 5 / 9
   end
 
   def status
